@@ -6,38 +6,54 @@
   </head>
 
   <body>
+<!-- the line below is telling the form where to send to -->
       <form action="https://www.google.com" method="post">
+<!-- the lines below are to register text fields for various information -->
         <input type="text" name="username">
         <input type="date" name="birthday">
         <input type="time" name="game-time">
-        <input type="email" name="email-address">
+<!-- the line below shows the email address as a requirment to fill out before the submit can be clicked -->
+        <input type="email" name="email-address" required>
         <input type="url" name="website">
         <input type="number" name="cost">
         <input type="tel" name="phone-number">
-
+<!-- the lines below is to establish a blank text field to type + text description -->
         <textarea name="comment">
           Add your comment here.
         </textarea>
-
+<!-- the lines below are to create "radio buttons" to select -->
         <input type="radio" name="day" value="Friday" checked>Friday
         <input type="radio" name="day" value="Saturday">Saturday
         <input type="radio" name="day" value="Sunday">Sunday
-
+<!-- the lines below are to create "checkboxes" to select -->
         <input type="checkbox" name="day" value="Friday" checked>Friday
         <input type="checkbox" name="day" value="Saturday">Saturday
         <input type="checkbox" name="day" value="Sunday">Sunday
-
+<!-- the lines below are to create a "drop down box" to choose from a list -->
         <select name="day" multiple>
           <option value="Friday">Friday</option>
           <option value="Saturday">Saturday</option>
           <option value="Sunday">Sunday</option>
         </select>
-
+<!-- the line below is to create a button to submit the information to -->
         <input type="submit" name="submit" value="Send">
-
+<!-- the lines below are to create a stylized button to submit the information to -->
         <button type="submit" name="submit">
           <strong>Send us</strong> a message!
         </button>
+<!-- the lines below are to create a labeled text field for information -->
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+<!-- the lines below are to create a field that holds all of the information below -->
+        <fieldset>
+          <legend>Login</legend>
+          <label>username
+            <input type="text" name="username" placeholder="enter your full astate email address">
+          </label>
+<!-- the lines below are to disable a field from being typed in -->
+          <label>password
+            <input type="text" name="password" disabled>
+        </fieldset>
 
       </form>
   </body>
